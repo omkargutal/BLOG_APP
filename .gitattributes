@@ -1,0 +1,8 @@
+# Mark main code files as linguist-detectable
+*.js linguist-detectable=true
+*.jsx linguist-detectable=true
+*.ts linguist-detectable=true
+*.tsx linguist-detectable=true
+*.css linguist-detectable=true
+*.scss linguist-detectable=true
+*.json linguist-detectable=true
