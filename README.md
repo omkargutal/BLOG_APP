@@ -1,69 +1,35 @@
-# React + TypeScript + Vite
+# Blog Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Blog Website is a modern, fully responsive web application designed to provide an elegant and engaging reading experience. Built with React (Vite + TypeScript), it leverages the latest front-end technologies such as Tailwind CSS v4 for styling, Radix UI for accessible UI primitives, and a component-driven architecture for scalability.
+This project serves as a robust template for content-driven platforms, making it suitable for personal blogs, tech publications, company updates, or knowledge-sharing platforms. The design emphasizes clarity, readability, and user interaction, featuring a clean layout with sections for featured articles, latest posts, category filters, and a sidebar for additional content or widgets.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Setup Guide
 
-## Expanding the ESLint configuration
+### 1. Prerequisites
+Ensure you have **Node.js (v16 or higher)** installed:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+node --version
+npm --version
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Install Dependencies
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+npm install
+npm install lucide-react class-variance-authority clsx tailwind-merge
+npm install @radix-ui/react-separator @radix-ui/react-tabs
+npm install sonner@2.0.3 embla-carousel-react recharts react-day-picker
+npm install @hookform/resolvers react-hook-form@7.55.0 zod
+npm install cmdk react-resizable-panels vaul input-otp
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Run Project
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Troubleshooting
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Import errors → check if all dependencies are installed
+Tailwind not working → verify index.css and main.tsx imports
+Missing components → confirm files exist in correct src/components folders
+
+
